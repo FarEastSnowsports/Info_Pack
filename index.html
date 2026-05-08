@@ -632,9 +632,126 @@
     display: inline-block;
     transition: opacity 0.3s;
   }
+  /* ── Password gate ── */
+  #pw-gate {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: var(--navy);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+  #pw-gate img.pw-logo {
+    height: 28px;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+    margin-bottom: 2.5rem;
+  }
+  #pw-gate h2 {
+    color: var(--white);
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.4rem;
+    text-align: center;
+  }
+  #pw-gate p {
+    color: rgba(255,255,255,0.5);
+    font-size: 0.85rem;
+    margin-bottom: 1.75rem;
+    text-align: center;
+  }
+  #pw-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    max-width: 320px;
+  }
+  #pw-input {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    border: 1.5px solid rgba(255,255,255,0.15);
+    background: rgba(255,255,255,0.07);
+    color: var(--white);
+    font-size: 1rem;
+    font-family: inherit;
+    outline: none;
+    text-align: center;
+    letter-spacing: 0.1em;
+    transition: border-color 0.2s;
+  }
+  #pw-input:focus { border-color: var(--gold); }
+  #pw-input.error { border-color: #e05555; animation: shake 0.3s ease; }
+  #pw-submit {
+    padding: 0.75rem;
+    border-radius: 8px;
+    border: none;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 0.95rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: opacity 0.15s;
+  }
+  #pw-submit:hover { opacity: 0.88; }
+  #pw-error {
+    color: #e07070;
+    font-size: 0.8rem;
+    text-align: center;
+    min-height: 1.2em;
+  }
+  @keyframes shake {
+    0%,100% { transform: translateX(0); }
+    25% { transform: translateX(-6px); }
+    75% { transform: translateX(6px); }
+  }
 </style>
 </head>
 <body>
+
+<!-- ── Password Gate ── -->
+<div id="pw-gate">
+  <img src="fes-logo.png" alt="Far East Snowsports" class="pw-logo">
+  <h2>Pre-Interview Information Pack</h2>
+  <p>26/27 Winter Season &nbsp;·&nbsp; Niseko, Hokkaido</p>
+  <form id="pw-form" onsubmit="return checkPassword(event)">
+    <input id="pw-input" type="password" placeholder="Enter access code" autocomplete="off" autofocus>
+    <button id="pw-submit" type="submit">Access Pack</button>
+    <div id="pw-error"></div>
+  </form>
+</div>
+
+<script>
+(function() {
+  const PW = 'FES2627';
+  if (sessionStorage.getItem('fes_auth') === '1') {
+    document.getElementById('pw-gate').style.display = 'none';
+  }
+})();
+
+function checkPassword(e) {
+  e.preventDefault();
+  const input = document.getElementById('pw-input');
+  const error = document.getElementById('pw-error');
+  if (input.value === 'FES2627') {
+    sessionStorage.setItem('fes_auth', '1');
+    document.getElementById('pw-gate').style.display = 'none';
+  } else {
+    error.textContent = 'Incorrect access code. Please try again.';
+    input.value = '';
+    input.classList.add('error');
+    setTimeout(() => input.classList.remove('error'), 400);
+    input.focus();
+  }
+  return false;
+}
+</script>
 
 <!-- ──────────────── STICKY NAV ──────────────── -->
 <nav class="sticky-nav">
