@@ -1,0 +1,1820 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pre-Interview Information Pack — Far East Snowsports 26/27</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0d2240;
+    --mid-navy: #1a3a5c;
+    --gold: #c9a84c;
+    --light: #f4f6f9;
+    --white: #ffffff;
+    --text: #1c1c1e;
+    --muted: #5a6475;
+    --border: #dde3ec;
+    --radius: 10px;
+    --max: 860px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text);
+    background: var(--light);
+  }
+
+  /* ── Sticky Nav ── */
+  .sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: var(--navy);
+    border-bottom: 1px solid rgba(201,168,76,0.25);
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.25rem;
+  }
+  .nav-brand {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .nav-links {
+    display: flex;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    margin-left: 1.5rem;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a {
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 500;
+    padding: 0.35rem 0.7rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: color 0.15s, background 0.15s;
+  }
+  .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
+  .nav-links a.active { color: var(--gold); }
+
+  /* Hamburger — mobile only */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 6px;
+    margin-left: auto;
+    background: none;
+    border: none;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: rgba(255,255,255,0.8);
+    border-radius: 2px;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Mobile dropdown */
+  .nav-drawer {
+    display: none;
+    position: fixed;
+    top: 52px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background: var(--navy);
+    border-bottom: 2px solid var(--gold);
+    padding: 0.5rem 0;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+  .nav-drawer.open { display: block; }
+  .nav-drawer a {
+    display: block;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    transition: color 0.15s, padding-left 0.15s;
+  }
+  .nav-drawer a:last-child { border-bottom: none; }
+  .nav-drawer a:hover { color: var(--gold); padding-left: 1.85rem; }
+
+  /* Push body down so content isn't hidden under nav */
+  body { padding-top: 52px; }
+
+  @media (max-width: 700px) {
+    .nav-links { display: none; }
+    .nav-hamburger { display: flex; }
+  }
+
+  /* ── Hero ── */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    background: var(--navy);
+  }
+  .hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    opacity: 0.65;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(to bottom, rgba(13,34,64,0.2) 0%, rgba(13,34,64,0.85) 100%);
+  }
+  .hero-logo {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+  .hero-divider {
+    width: 36px;
+    height: 2px;
+    background: var(--gold);
+    margin: 0 auto 1.25rem;
+    opacity: 0.9;
+  }
+  .hero h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.1;
+    max-width: 700px;
+    letter-spacing: -0.01em;
+  }
+  .hero p {
+    margin-top: 0.9rem;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.75);
+    max-width: 520px;
+    letter-spacing: 0.04em;
+  }
+  .hero-tagline {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .hero-tag {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-radius: 20px;
+    padding: 0.3rem 0.85rem;
+  }
+
+  /* ── Layout ── */
+  .container {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 5rem;
+  }
+
+  /* ── Intro ── */
+  .intro {
+    background: var(--white);
+    border-left: 4px solid var(--gold);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 2.5rem;
+    color: var(--muted);
+    font-size: 0.95rem;
+  }
+
+  /* ── Section ── */
+  section {
+    margin-bottom: 3rem;
+  }
+  .section-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.4rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--border);
+  }
+  h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin: 1.5rem 0 0.6rem;
+  }
+  p { margin-bottom: 0.9rem; }
+
+  /* ── Card ── */
+  .card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid var(--border);
+  }
+  .card-navy {
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+  }
+  .card-navy h3 { color: var(--gold); margin-top: 0; }
+  .card-navy p, .card-navy li { color: rgba(255,255,255,0.85); }
+
+  /* ── Pillars ── */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.25rem 0;
+  }
+  .pillar {
+    background: var(--navy);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.25rem;
+  }
+  .pillar-num {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+  .pillar-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 0.25rem;
+  }
+  .pillar-desc {
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.5;
+  }
+
+  /* ── Eval grid ── */
+  .eval-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .eval-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.25rem;
+    border: 1px solid var(--border);
+  }
+  .eval-card h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.4rem;
+  }
+  .eval-card ul {
+    padding-left: 1.1rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+  }
+  .eval-card li { margin-bottom: 0.2rem; }
+
+  /* ── Pay rates ── */
+  .rate-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  .rate-card {
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+    border: 2px solid var(--border);
+    background: var(--white);
+  }
+  .rate-card.highlight { border-color: var(--gold); background: #fdf9ef; }
+  .rate-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.35rem;
+  }
+  .rate-pct {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--navy);
+    line-height: 1;
+  }
+  .rate-pct span { font-size: 1.4rem; }
+  .rate-approx { font-size: 0.72rem !important; font-weight: 600; letter-spacing: 0.04em; display: inline; vertical-align: middle; opacity: 0.7; margin-right: 0.2rem; }
+  .rate-card.highlight .rate-pct { color: var(--gold); }
+  .rate-desc {
+    font-size: 0.82rem;
+    color: var(--muted);
+    margin-top: 0.5rem;
+    line-height: 1.4;
+  }
+
+  /* ── Table ── */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    margin: 0.75rem 0 1.25rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  th {
+    background: var(--navy);
+    color: var(--white);
+    padding: 0.7rem 1rem;
+    text-align: left;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+  td {
+    padding: 0.65rem 1rem;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:nth-child(even) td { background: #f8fafc; }
+  .covered { color: #1a7a4a; font-weight: 600; }
+  .optional { color: #b07000; font-weight: 600; }
+  .own { color: #c0392b; font-weight: 600; }
+
+  /* ── Timeline ── */
+  .timeline {
+    position: relative;
+    padding-left: 1.8rem;
+    margin: 1rem 0;
+  }
+  .timeline::before {
+    content: "";
+    position: absolute;
+    left: 0.55rem;
+    top: 0.4rem;
+    bottom: 0.4rem;
+    width: 2px;
+    background: var(--border);
+  }
+  .tl-item {
+    position: relative;
+    margin-bottom: 1.1rem;
+  }
+  .tl-item::before {
+    content: "";
+    position: absolute;
+    left: -1.3rem;
+    top: 0.45rem;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--gold);
+    border: 2px solid var(--white);
+    box-shadow: 0 0 0 2px var(--gold);
+  }
+  .tl-date {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+  }
+  .tl-desc { font-size: 0.9rem; color: var(--text); }
+
+  /* ── Lists ── */
+  ul, ol {
+    padding-left: 1.3rem;
+    margin-bottom: 0.9rem;
+  }
+  li { margin-bottom: 0.35rem; }
+
+  /* ── Insurance badge ── */
+  .ins-covered { color: #1a7a4a; }
+  .ins-optional { color: #b07000; }
+  .ins-own { color: #666; }
+
+  /* ── PDF screenshot ── */
+  .pdf-img {
+    width: 100%;
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    margin: 1rem 0;
+    display: block;
+  }
+  .pdf-img-caption {
+    text-align: center;
+    font-size: 0.75rem;
+    color: var(--muted);
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  /* ── FAQ ── */
+  .faq-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+  }
+  details > summary {
+    list-style: none;
+    padding: 1rem 1.25rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--navy);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  details > summary::after {
+    content: "+";
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--gold);
+    flex-shrink: 0;
+    margin-left: 1rem;
+  }
+  details[open] > summary::after { content: "−"; }
+  details > summary::-webkit-details-marker { display: none; }
+  .faq-answer {
+    padding: 0 1.25rem 1rem;
+    font-size: 0.92rem;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    padding-top: 0.75rem;
+  }
+
+  /* ── Loyalty table ── */
+  .loyalty-img { max-width: 600px; margin: 0 auto; display: block; }
+
+  /* ── Rewards grid ── */
+  .rewards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1rem 0;
+  }
+  .rewards-col {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+  }
+  .rewards-col h4 {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+  }
+  .rewards-col ul { padding-left: 1rem; font-size: 0.88rem; color: var(--muted); }
+
+  /* ── Footer ── */
+  .footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 2rem 1.5rem;
+    margin-top: 4rem;
+  }
+  .footer strong { color: var(--gold); }
+
+  /* ── Responsive ── */
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 1.8rem; }
+    .pillars, .eval-grid, .rate-cards, .rewards-grid { grid-template-columns: 1fr; }
+    .hero { height: 380px; }
+
+    /* ── Table horizontal scroll ── */
+    table {
+      display: block;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* ── Tighten container padding ── */
+    .container { padding: 1rem; }
+    .section { padding: 1.5rem 1rem; }
+
+    /* ── Reduce chart right-axis clipping ── */
+    canvas { max-width: 100%; }
+
+    /* ── Nav logo size ── */
+    .nav-brand img { height: 18px !important; }
+    .nav-brand span { font-size: 0.65rem; }
+
+    /* ── Hero logo size ── */
+    .hero-logo img { height: 26px !important; }
+
+    /* ── Table cell padding tighter ── */
+    td, th { padding: 0.55rem 0.7rem; font-size: 0.82rem; }
+
+    /* ── Section intro text ── */
+    .intro { font-size: 0.95rem; }
+  }
+
+  /* ── Scroll-reveal ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-delay-1 { transition-delay: 0.08s; }
+  .reveal-delay-2 { transition-delay: 0.16s; }
+  .reveal-delay-3 { transition-delay: 0.24s; }
+  .reveal-delay-4 { transition-delay: 0.32s; }
+
+  /* ── Card hover lift ── */
+  .card, .rate-card, .pillar {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .card:hover, .rate-card:hover, .pillar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(13,34,64,0.10);
+  }
+
+  /* ── Hero tag hover ── */
+  .hero-tag {
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+  .hero-tag:hover {
+    color: rgba(255,255,255,0.95);
+    border-color: rgba(201,168,76,0.6);
+    background: rgba(201,168,76,0.12);
+  }
+
+  /* ── Nav link underline slide ── */
+  .nav-links a {
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    right: 50%;
+    height: 2px;
+    background: var(--gold);
+    transition: left 0.2s ease, right 0.2s ease;
+  }
+  .nav-links a:hover::after {
+    left: 0.5rem;
+    right: 0.5rem;
+  }
+
+  /* ── Stat counter animation ── */
+  .rate-pct .count-num {
+    display: inline-block;
+    transition: opacity 0.3s;
+  }
+</style>
+</head>
+<body>
+
+<!-- ──────────────── STICKY NAV ──────────────── -->
+<nav class="sticky-nav">
+  <div class="nav-brand">
+    <img src="fes-logo.png" alt="Far East Snowsports" style="height:22px; filter:brightness(0) invert(1); vertical-align:middle; margin-right:0.5rem; opacity:0.9;">
+    <span>26/27</span>
+  </div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#role">The Role</a>
+    <a href="#pay">Pay</a>
+    <a href="#workload">Workload</a>
+    <a href="#progression">Career</a>
+    <a href="#guiding">Guiding</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#living">Living</a>
+    <a href="#accommodation">Accommodation</a>
+    <a href="#vehicle">Vehicle</a>
+    <a href="#insurance">Insurance</a>
+    <a href="#visa">Visa</a>
+    <a href="#support">Support</a>
+    <a href="#interview">Interview</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="nav-drawer" id="navDrawer">
+  <a href="#about" class="drawer-link">About FES</a>
+  <a href="#role" class="drawer-link">The Role</a>
+  <a href="#pay" class="drawer-link">Pay Structure</a>
+  <a href="#workload" class="drawer-link">Workload Reality</a>
+  <a href="#progression" class="drawer-link">Career Progression</a>
+  <a href="#guiding" class="drawer-link">Guiding</a>
+  <a href="#timeline" class="drawer-link">Season Timeline</a>
+  <a href="#living" class="drawer-link">Living in Niseko</a>
+  <a href="#accommodation" class="drawer-link">Accommodation</a>
+  <a href="#vehicle" class="drawer-link">Vehicle</a>
+  <a href="#insurance" class="drawer-link">Insurance</a>
+  <a href="#visa" class="drawer-link">Visa &amp; Work Status</a>
+  <a href="#support" class="drawer-link">Support Programme</a>
+  <a href="#interview" class="drawer-link">Your Interview</a>
+  <a href="#faq" class="drawer-link">FAQ</a>
+</div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const drawer = document.getElementById('navDrawer');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    drawer.classList.toggle('open');
+  });
+
+  // Close drawer when a link is clicked
+  document.querySelectorAll('.drawer-link').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      drawer.classList.remove('open');
+    });
+  });
+
+  // Highlight active section in desktop nav
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -75% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+</script>
+
+<!-- ──────────────── HERO ──────────────── -->
+<div class="hero">
+  <img src="hero.jpg" alt="FES instructor charging powder in Niseko backcountry">
+  <div class="hero-overlay">
+    <div class="hero-logo">
+      <img src="fes-logo.png" alt="Far East Snowsports" style="height:32px; filter:brightness(0) invert(1); opacity:0.92; display:block; margin:0 auto;">
+    </div>
+    <div class="hero-divider"></div>
+    <h1>Pre-Interview<br>Information Pack</h1>
+    <p>26/27 Winter Season &nbsp;·&nbsp; Niseko, Hokkaido</p>
+    <div class="hero-tagline">
+      <span class="hero-tag">Boutique</span>
+      <span class="hero-tag">Performance-based</span>
+      <span class="hero-tag">Long-term career</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <p class="intro">
+    You've been invited to interview with Far East Snowsports. This pack covers the role, what you would earn, and the practicalities of a season with us. Read it before we meet — the interview works better when you arrive with a clear picture of how we operate.
+  </p>
+
+  <!-- ──────────────── WHO WE ARE ──────────────── -->
+  <section id="about">
+    <div class="section-label">About Us</div>
+    <h2>Who We Are</h2>
+
+    <p>Far East Snowsports (FES) was established in 2015 in Niseko, Hokkaido. We are a boutique snowsports school built around individually curated guest experiences and the belief that snowsports instruction should be a real, sustainable profession.</p>
+
+    <p>As AI continues to reshape the global workforce, human interaction — the kind that happens on a mountain, between a skilled instructor and a curious guest — will only become more valued. Snowsports lessons are not something that can be automated. FES is committed to building the structure, systems, and culture that allow career instructors to lead that future with credibility and confidence.</p>
+
+    <p><strong>We think in decades, not seasons.</strong> Our ambition is to help shape what the snowsports industry looks like over the next 100 years — and that starts with treating instruction as a long-term career, not a one-winter detour. Everything we've built — OBP, the Support Programme, the Loyalty Programme, the path from Junior to Full Member — is designed so that the value of being part of FES compounds the longer you stay. A first season at FES is valuable. A second, third, fifth, and tenth season are exponentially more so.</p>
+
+    <p>FES is also the team behind <strong>Stivot</strong> (a snowsports school management software) and the <strong>Adventure Map</strong> — both built from our own operational experience in Niseko.</p>
+
+    <img class="pdf-img" src="adventure-map.jpg" alt="FES Adventure Map — illustrated ski trail map of Niseko with collectible stickers" style="border-radius:var(--radius); margin-top:0.5rem; margin-bottom:0.4rem; max-height:300px; object-fit:contain; background:#e8ecf0;">
+    <p class="pdf-img-caption">The FES Adventure Map — our illustrated guide to Niseko, with collectible sticker challenges</p>
+
+    <img class="pdf-img" src="team_group.jpg" alt="FES team on the mountain together" style="border-radius:var(--radius); margin-bottom:0.5rem; object-fit:cover; max-height:340px;">
+    <p class="pdf-img-caption">The FES team — 25/26 season, Niseko</p>
+
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-num">Mission 1</div>
+        <div class="pillar-title">This is our real job</div>
+        <div class="pillar-desc">Instructing is a career, not a stopgap. We build for longevity.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">Mission 2</div>
+        <div class="pillar-title">For the snow to keep falling</div>
+        <div class="pillar-desc">Environmental responsibility is non-negotiable for this industry to survive.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">Mission 3</div>
+        <div class="pillar-title">Contribute to the community</div>
+        <div class="pillar-desc">We give back to Niseko and the wider snowsports industry.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">Mission 4</div>
+        <div class="pillar-title">Develop the next generation</div>
+        <div class="pillar-desc">We invest in the instructors who will lead the profession forward.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── JUNIOR MEMBER ROLE ──────────────── -->
+  <section id="role">
+    <div class="section-label">The Role</div>
+    <h2>The Junior Member Role</h2>
+
+    <p>Every new member at FES starts as a Junior Member. This is an <strong>outsourcing contract</strong> — you are an independent contractor, not an employee.</p>
+
+    <div class="card">
+      <h3 style="margin-top:0">What that means in practice</h3>
+      <ul>
+        <li>You process your own taxes</li>
+        <li>You organise your own phone</li>
+        <li>FES manages your calendar — lessons are allocated to you, and you request dates to block in advance</li>
+        <li>You take initiative to communicate directly with guests who return to you or are referred to you</li>
+        <li>Returning guests and referrals invoice through you (OBP — see Pay Structure)</li>
+        <li>No membership fee — unlike Full Members, Junior Members have no upfront financial commitment</li>
+        <li>No snow school line-up or standby duties</li>
+      </ul>
+      <p style="margin-bottom:0"><strong>Contract period:</strong> Late November to mid-April</p>
+    </div>
+
+    <div class="card" style="background:#f8fafc; border-left:4px solid var(--gold);">
+      <h3 style="margin-top:0; color:var(--navy);">Not a fixed role</h3>
+      <p style="font-size:0.92rem; margin-bottom:0.6rem;">Being a Junior Member isn't a junior position in a hierarchy. Within our team, every member is a mentor in some areas and a mentee in others — and that holds whether you're in your first season or your tenth. The Junior Member range itself is wide: some members are early in their career and lean more on being mentored, while others arrive with seasons behind them and end up mentoring more than they're mentored.</p>
+      <p style="font-size:0.92rem; margin-bottom:0;">What matters most — especially for Junior Members — is the mindset that holds both at once: confident enough to contribute, open enough to keep learning. Once that mindset shows up consistently, alongside the operational efficiency we expect from a Full Member, you'll be invited to step up. For some, that comes in their second season; for others, it takes many years. Where you start shapes the length of the path, not the value of being here.</p>
+    </div>
+
+    <img class="pdf-img" src="agreement.png" alt="FES vs Traditional Ski School comparison">
+    <p class="pdf-img-caption">How FES Junior and Full membership compares to a conventional ski school role</p>
+  </section>
+
+  <!-- ──────────────── PAY STRUCTURE ──────────────── -->
+  <section id="pay">
+    <div class="section-label">Compensation</div>
+    <h2>Pay Structure</h2>
+
+    <p>All rates are approximate and tax-inclusive. Exact amounts vary depending on agent fees and credit card processing costs — typically within <strong>±5%</strong> of the stated rates.</p>
+
+    <div class="card" style="background:#f8fafc; border-left:4px solid var(--gold);">
+      <h3 style="margin-top:0; color:var(--navy);">Unconventional. Why?</h3>
+      <p style="margin-bottom:0; font-size:0.92rem;">At most schools, your rate is set by your certification level or years of experience. At FES, we don't think that's the right measure. The most direct indicator of the value you create is whether guests choose to return to you — or refer others to you. Returning clients are earned, not assigned. That is what we reward.</p>
+    </div>
+
+    <h3>Junior Member Rates</h3>
+
+    <div class="rate-cards">
+      <div class="rate-card">
+        <div class="rate-label">Assigned lessons</div>
+        <div class="rate-pct"><span class="rate-approx">approx.</span> 35<span>%</span></div>
+        <div class="rate-desc">FES allocates you the client. You deliver the lesson.</div>
+      </div>
+      <div class="rate-card highlight">
+        <div class="rate-label">Own Booking Process (OBP)</div>
+        <div class="rate-pct"><span class="rate-approx">approx.</span> 55<span>%</span></div>
+        <div class="rate-desc">You bring the client, create the invoice, collect payment, deliver the lesson.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">How OBP works</h3>
+      <p>You have an account in our management system (Stivot). When a guest returns to you or you bring in a new client, you communicate with them directly — agree dates, products, pricing. You create the invoice and send it to them. The client pays. You deliver the lesson. You receive ~55% of what is charged. This is available from your very first day if you have clients coming to you.</p>
+      <p style="margin-bottom:0"><strong>Blended rate example:</strong> 50 working days, all assigned = ~35%. 25 days assigned + 25 days OBP = approximately ~45% average.</p>
+    </div>
+
+    <img class="pdf-img" src="jr_rates.png" alt="Junior Member rate structure from AGM">
+    <p class="pdf-img-caption">Junior Member rate structure — 25/26 season</p>
+
+    <h3>Full Member</h3>
+    <table>
+      <thead><tr><th>Item</th><th>Detail</th></tr></thead>
+      <tbody>
+        <tr><td>Commission rate</td><td>20%</td></tr>
+        <tr><td>Commission cap (25/26)</td><td>¥730,000/season</td></tr>
+        <tr><td>Annual membership fee</td><td>¥741,000</td></tr>
+        <tr><td>Fee breakdown</td><td>¥74,800 system royalties + ¥280,000 non-refundable commission (~12 lesson days) + ¥386,200 lift pass</td></tr>
+      </tbody>
+    </table>
+
+    <img class="pdf-img" src="full_rates.png" alt="Full Member rate and fee structure from AGM">
+    <p class="pdf-img-caption">Full Member rate structure — 25/26 season</p>
+
+    <h3>Referral Commission</h3>
+    <p>If you refer a booking to any FES member — Junior or Full: <strong>10% commission</strong> paid to you, provided you process the invoice and follow through with payments.</p>
+  </section>
+
+  <!-- ──────────────── WORKLOAD REALITY ──────────────── -->
+  <section id="workload">
+    <div class="section-label">Workload Reality</div>
+    <h2>What to Expect: First Season Earnings</h2>
+
+    <p>One of the most common questions from candidates: how many days will I actually work? The honest answer is that it varies significantly — and it is partly in your control.</p>
+
+    <p><strong>Assigned days</strong> depend on bookings received, weather, and team scheduling. FES does not guarantee a minimum number of working days per season. A typical first-season Junior Member works between <strong>40–70 assigned days</strong> (in full-day equivalents), though reality is more nuanced. Roughly half of all lessons are half-days — so the actual number of times you go out to teach is closer to <strong>60–90 individual sessions</strong> across the season.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin:1rem 0 1.25rem;">
+      <div class="card" style="margin-bottom:0; padding:1.1rem 1.25rem;">
+        <h3 style="margin-top:0; font-size:0.85rem; color:var(--gold); letter-spacing:0.1em; text-transform:uppercase;">Peak periods</h3>
+        <ul style="font-size:0.88rem; margin-bottom:0;">
+          <li><strong>Christmas to New Year</strong> — the most consistent peak of the season</li>
+          <li><strong>Chinese New Year</strong> — late January to mid-February depending on the year; a major driver for FES</li>
+          <li><strong>Australian school holidays</strong> — overlaps with late January and February</li>
+          <li><strong>Mid-March</strong> — sometimes a second, unexpected surge</li>
+          <li><strong>Easter &amp; SE Asian school holidays</strong> — Indonesian, Thai, and Filipino school breaks fall unpredictably through January–March; can quietly extend a slow period into a busy one. Treat as a wildcard.</li>
+        </ul>
+      </div>
+      <div class="card" style="margin-bottom:0; padding:1.1rem 1.25rem;">
+        <h3 style="margin-top:0; font-size:0.85rem; color:var(--muted); letter-spacing:0.1em; text-transform:uppercase;">Quieter periods</h3>
+        <ul style="font-size:0.88rem; margin-bottom:0;">
+          <li><strong>Early December</strong> — snow-dependent, season ramps slowly</li>
+          <li><strong>Early January dip</strong> — between New Year and Chinese New Year, bookings can drop sharply for 1–2 weeks</li>
+          <li><strong>Post-CNY dip</strong> — once Chinese New Year ends, there is often a brief pause before Australian holidays continue the momentum</li>
+          <li><strong>Late March</strong> — season winds down; snowpack and bookings both tail off</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Understanding Chinese New Year</h3>
+    <p>Chinese New Year (Spring Festival) is a lunar holiday — the date shifts each year, typically falling between late January and mid-February. For FES, it is one of the most significant demand drivers of the season. The two weeks surrounding CNY generate a sustained surge in bookings from mainland Chinese, Hong Kong, Singaporean, and broader Asian guests.</p>
+    <p>The pattern: there is usually a <strong>dip in early January</strong> after the New Year holiday noise clears and before CNY demand builds. Then a <strong>sharp peak</strong> as CNY week arrives. Then another <strong>dip immediately after</strong> — often the quietest week of the mid-season. Australian school holiday bookings then bridge into the second half of February.</p>
+
+    <div class="card" style="border-left:4px solid var(--muted); background:#f4f6f9; margin-bottom:1.25rem; padding:1rem 1.25rem;">
+      <strong style="font-size:0.88rem; color:var(--navy);">On unpredictability:</strong>
+      <p style="font-size:0.88rem; margin-top:0.4rem; margin-bottom:0;">Season-to-season income fluctuates significantly and doesn't follow a clean curve. March can be quiet one year and unexpectedly busy the next. Snowfall timing affects December entirely. CNY demand can shift two to three weeks depending on the lunar calendar. Plan conservatively and treat any upside as a bonus, not a baseline.</p>
+    </div>
+
+    <p><strong>OBP supplements assigned work.</strong> If you have returning guests or generate your own bookings, OBP sits on top of your assigned days and is available from day one. Members with strong OBP networks can meaningfully increase both their total working sessions and their effective rate.</p>
+
+    <div class="card" style="border-left:4px solid #e74c3c; background:#fff8f8; margin-bottom:1.5rem;">
+      <strong>Financial planning:</strong> Don't arrive in Niseko without a buffer. The first few weeks of any season are unpredictable — snow-dependent, weather-affected, and typically light on assigned days. Plan for <strong>3–4 weeks of living costs</strong> before reliable income begins.
+      <p style="margin-top:0.75rem; margin-bottom:0; font-size:0.92rem;"><strong>Pay periods:</strong> Bookings close at the end of each calendar month. Payment is made on the <strong>15th of the following month</strong> — so your first payout (for December lessons) arrives on <strong>15 January</strong>. Note that a booking's <em>end date</em> determines which pay period it belongs to: a lesson that starts in December but ends in January is counted as January billing and paid on 15 February. Factor this into your buffer planning.</p>
+    </div>
+
+
+    <h3>Source Breakdown — Why It Matters</h3>
+    <table>
+      <thead><tr><th>Booking source</th><th>Commission rate</th><th>Typical first-season share</th></tr></thead>
+      <tbody>
+        <tr><td>FES Assign</td><td>approx. 35%</td><td>approx. 72% of gross</td></tr>
+        <tr><td>Internal Referral</td><td>approx. 35%</td><td>approx. 8% of gross</td></tr>
+        <tr><td>Web</td><td>approx. 35%</td><td>approx. 2% of gross</td></tr>
+        <tr><td style="color:var(--gold); font-weight:600">OBP (Own Booking Process)</td><td style="color:var(--gold); font-weight:600">approx. 55%</td><td>approx. 7% of gross</td></tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:0.92rem; color:var(--muted);">Growing your OBP proportion is the single most effective lever for increasing your earnings rate. A scenario with 40% OBP on the same gross billing would add approximately <strong>¥290,000</strong> to your season earnings.</p>
+  </section>
+
+  <!-- ──────────────── CAREER PROGRESSION ──────────────── -->
+  <section id="progression">
+    <div class="section-label">Growth</div>
+    <h2>Career Progression: Junior → Full Member</h2>
+
+    <p>There is no fixed timeline and no fixed criteria checklist. Almost all new members start as a Junior Member — not as a trial, but because building a track record within FES is how we maintain our standard. In rare cases, an instructor with an exceptional professional background — such as a national demo team member or a widely recognised high-profile professional — may be considered for Full Member from the outset. This is the exception, not the rule. Some members transition to Full Member the season after their first. Some take five years. It genuinely depends on the individual.</p>
+
+    <p>The size of your client base is one factor, but it is not the only one. We also look at:</p>
+
+    <ul>
+      <li>Your ability to mentor and support other team members</li>
+      <li>How you collaborate within the team</li>
+      <li>Your operational and admin performance — SOP adherence, reporting, communication</li>
+    </ul>
+
+    <p>Junior Members who reach 50 full working days and return the following season become eligible for equipment support (see Support Programme).</p>
+
+    <h3>What the numbers actually show</h3>
+    <p>The chart below is built from real Stivot billing data across 5 Junior Members who were new to Niseko, over up to three seasons. It shows the single most important pattern in a multi-season FES career: <strong>school-assigned work stays roughly flat</strong>, while <strong>your own client bookings (OBP) compound year on year</strong>. By Year 3, OBP accounts for nearly half of total billing — and it is the only part that keeps growing.</p>
+
+    <div style="background:#fff; border-radius:var(--radius); border:1px solid var(--border); padding:1.25rem 1rem 1rem; margin:1rem 0;">
+      <canvas id="progressionChart" style="width:100%; max-height:300px;"></canvas>
+    </div>
+
+    <table style="margin-top:0.5rem;">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Avg gross billing</th>
+          <th>School-assigned</th>
+          <th style="color:var(--gold);">Own clients (OBP)</th>
+          <th>OBP share</th>
+          <th>Avg earnings</th>
+          <th>Effective rate</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Year 1</strong></td>
+          <td>¥4.42M</td>
+          <td>¥4.12M</td>
+          <td style="color:var(--gold); font-weight:600;">¥0.30M</td>
+          <td>7%</td>
+          <td>¥1.61M</td>
+          <td>36.4%</td>
+        </tr>
+        <tr>
+          <td><strong>Year 2</strong></td>
+          <td>¥5.47M</td>
+          <td>¥4.17M</td>
+          <td style="color:var(--gold); font-weight:600;">¥1.29M</td>
+          <td>24%</td>
+          <td>¥2.17M</td>
+          <td>39.7%</td>
+        </tr>
+        <tr>
+          <td><strong>Year 3 *</strong></td>
+          <td>¥6.33M</td>
+          <td>¥4.14M</td>
+          <td style="color:var(--gold); font-weight:600;">¥2.19M</td>
+          <td>35%</td>
+          <td>¥2.65M</td>
+          <td>41.9%</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.82rem; color:var(--muted); margin-top:0.5rem;">* Year 1 &amp; 2: n=5 members. Year 3: n=3 members (not all have completed three seasons). OBP split read from Stivot sales-by-source data. Earnings = commission income from FES (35% on school-assigned work, 55% on OBP) — before personal income tax, tax return costs, and business expenses.</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <script>
+    (function() {
+      const ctx2 = document.getElementById('progressionChart').getContext('2d');
+      new Chart(ctx2, {
+        data: {
+          labels: ['Year 1', 'Year 2', 'Year 3 *'],
+          datasets: [
+            {
+              type: 'bar',
+              label: 'School-assigned bookings (¥M)',
+              data: [4.12, 4.17, 4.14],
+              backgroundColor: 'rgba(13,34,64,0.80)',
+              borderWidth: 0,
+              borderRadius: 4,
+              stack: 'billing',
+              yAxisID: 'yLeft',
+              order: 2
+            },
+            {
+              type: 'bar',
+              label: 'Own clients — OBP (¥M)',
+              data: [0.30, 1.29, 2.19],
+              backgroundColor: '#c9a84c',
+              borderWidth: 0,
+              borderRadius: 4,
+              stack: 'billing',
+              yAxisID: 'yLeft',
+              order: 2
+            },
+            {
+              type: 'line',
+              label: 'Effective earnings rate (%)',
+              data: [36.4, 39.7, 41.9],
+              borderColor: '#e74c3c',
+              backgroundColor: 'rgba(231,76,60,0.08)',
+              borderWidth: 2.5,
+              pointBackgroundColor: '#e74c3c',
+              pointRadius: 6,
+              pointHoverRadius: 8,
+              tension: 0.3,
+              fill: false,
+              yAxisID: 'yRight',
+              order: 1
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: {
+              position: 'top',
+              labels: {
+                font: { family: "'Inter', sans-serif", size: 12 },
+                usePointStyle: true,
+                padding: 16,
+                color: '#1c1c1e'
+              }
+            },
+            tooltip: {
+              callbacks: {
+                label: function(ctx) {
+                  if (ctx.dataset.yAxisID === 'yLeft') {
+                    return ' ' + ctx.dataset.label + ': ¥' + ctx.parsed.y + 'M';
+                  }
+                  return ' ' + ctx.dataset.label + ': ' + ctx.parsed.y + '%';
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              ticks: { font: { family: "'Inter', sans-serif", size: 13 }, color: '#1c1c1e' },
+              grid: { display: false }
+            },
+            yLeft: {
+              type: 'linear',
+              position: 'left',
+              stacked: true,
+              title: {
+                display: true,
+                text: 'Avg gross billing (¥M)',
+                font: { family: "'Inter', sans-serif", size: 11 },
+                color: '#5a6475'
+              },
+              ticks: {
+                font: { family: "'Inter', sans-serif", size: 11 },
+                color: '#5a6475',
+                callback: v => '¥' + v + 'M'
+              },
+              grid: { color: 'rgba(0,0,0,0.06)' },
+              max: 8
+            },
+            yRight: {
+              type: 'linear',
+              position: 'right',
+              title: {
+                display: true,
+                text: 'Effective earnings rate (%)',
+                font: { family: "'Inter', sans-serif", size: 11 },
+                color: '#e74c3c'
+              },
+              ticks: {
+                font: { family: "'Inter', sans-serif", size: 11 },
+                color: '#e74c3c',
+                callback: v => v + '%'
+              },
+              grid: { display: false },
+              min: 35,
+              max: 50
+            }
+          }
+        }
+      });
+    })();
+    </script>
+
+    <h3 style="margin-top:2rem;">Days Worked Per Season</h3>
+    <p style="font-size:0.92rem;">Based on a lesson rate of ¥100,000–¥115,000 per full day and roughly equal numbers of full-day and half-day sessions. Half-day sessions make up approximately half of all bookings by count — meaning you go out to teach significantly more times than a simple "days worked" figure suggests.</p>
+
+    <div style="background:#fff; border-radius:var(--radius); border:1px solid var(--border); padding:1.25rem 1rem 1rem; margin:1rem 0;">
+      <canvas id="daysChart" style="width:100%; max-height:260px;"></canvas>
+    </div>
+
+    <table style="margin-top:0.5rem;">
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Full-day sessions</th>
+          <th>Half-day sessions</th>
+          <th>Total sessions</th>
+          <th>Full-day equivalents</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Year 1</strong></td>
+          <td>27 days</td>
+          <td>27 days</td>
+          <td>54 days</td>
+          <td>~40 days</td>
+        </tr>
+        <tr>
+          <td><strong>Year 2</strong></td>
+          <td>34 days</td>
+          <td>34 days</td>
+          <td>68 days</td>
+          <td>~51 days</td>
+        </tr>
+        <tr>
+          <td><strong>Year 3 *</strong></td>
+          <td>39 days</td>
+          <td>39 days</td>
+          <td>78 days</td>
+          <td>~59 days</td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.82rem; color:var(--muted); margin-top:0.5rem;">* Estimated from average gross billing at ¥107,500/full-day and ¥55,000/half-day. Full-day equivalents = (FD × 1 + HD × 0.5). Actual numbers vary with lesson type, group size, and private vs group rates.</p>
+
+    <script>
+    (function() {
+      const ctx3 = document.getElementById('daysChart').getContext('2d');
+      new Chart(ctx3, {
+        type: 'bar',
+        data: {
+          labels: ['Year 1', 'Year 2', 'Year 3 *'],
+          datasets: [
+            {
+              label: 'Full-day sessions',
+              data: [27, 34, 39],
+              backgroundColor: 'rgba(13,34,64,0.82)',
+              borderWidth: 0,
+              borderRadius: 4,
+              stack: 'days'
+            },
+            {
+              label: 'Half-day sessions',
+              data: [27, 34, 39],
+              backgroundColor: 'rgba(201,168,76,0.70)',
+              borderWidth: 0,
+              borderRadius: 4,
+              stack: 'days'
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'top',
+              labels: {
+                font: { family: "'Inter', sans-serif", size: 12 },
+                usePointStyle: true,
+                padding: 16,
+                color: '#1c1c1e'
+              }
+            },
+            tooltip: {
+              callbacks: {
+                footer: function(items) {
+                  const total = items.reduce((s, i) => s + i.parsed.y, 0);
+                  return 'Total sessions: ' + total;
+                }
+              }
+            }
+          },
+          scales: {
+            x: {
+              stacked: true,
+              grid: { display: false },
+              ticks: { font: { family: "'Inter', sans-serif", size: 12 }, color: '#5a6475' }
+            },
+            y: {
+              stacked: true,
+              title: {
+                display: true,
+                text: 'Sessions',
+                font: { family: "'Inter', sans-serif", size: 11 },
+                color: '#5a6475'
+              },
+              ticks: { font: { family: "'Inter', sans-serif", size: 11 }, color: '#5a6475', stepSize: 10 },
+              grid: { color: 'rgba(0,0,0,0.06)' }
+            }
+          }
+        }
+      });
+    })();
+    </script>
+  </section>
+
+  <!-- ──────────────── GUIDING ──────────────── -->
+  <section id="guiding">
+    <div class="section-label">Guiding</div>
+    <h2>Guiding</h2>
+
+    <p>FES offers guiding services — accompanying guests outside the resort gates into Niseko's wider backcountry terrain. Guiding is not a standard part of every member's season. It is a pathway for members who build the experience, qualifications, and internal track record to earn it.</p>
+
+    <div class="card" style="border-left:4px solid #e74c3c; background:#fff8f8;">
+      <strong>First-year members in Niseko are not assigned outside-the-gates (OTG) guiding</strong>, regardless of qualifications held. The only exception is members who hold IFMGA certification with significant professional ski guiding experience in other areas.
+    </div>
+
+    <h3>The Path to OTG Guiding</h3>
+    <ul>
+      <li>Returning member with prior Niseko gate experience</li>
+      <li>Valid avalanche or guiding qualification (AST 1/2, NZMGA Assistant Guide, or equivalent)</li>
+      <li>Attend <strong>3+ FES guiding workshops</strong> in the current or prior season</li>
+      <li>Submit a minimum of <strong>2 trip logs</strong> using the FES format — at least one must include a 500m+ ascent, at least one must be with another FES member or mentor</li>
+      <li>Pass the <strong>FES Internal Guiding Assessment</strong>, conducted in-field by designated FES evaluators</li>
+    </ul>
+
+    <p style="font-size:0.92rem; color:var(--muted);">The assessment covers decision-making and risk management, Niseko-specific terrain knowledge, guest handling, and safety protocol. It is rigorous by design — we take this seriously because the environment is serious.</p>
+
+    <p style="font-size:0.92rem; color:var(--muted);">If guiding is part of why you're interested in FES, raise it in your interview. It helps us assess fit and start tracking your progression from the beginning.</p>
+  </section>
+
+  <!-- ──────────────── SEASON TIMELINE ──────────────── -->
+  <section id="timeline">
+    <div class="section-label">Logistics</div>
+    <h2>Season Timeline</h2>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-date">By 15 July</div>
+        <div class="tl-desc">Visa documents sent to Yuka if required</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">By August</div>
+        <div class="tl-desc">Accommodation situation must be confirmed</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Mid–late November</div>
+        <div class="tl-desc">Arrive in Niseko</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">~25–29 November</div>
+        <div class="tl-desc">5-day onboarding programme (see below)</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Late November</div>
+        <div class="tl-desc">Season operations begin</div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-date">Mid-April</div>
+        <div class="tl-desc">End of contract</div>
+      </div>
+    </div>
+
+    <h3>Onboarding Week</h3>
+    <ul>
+      <li><strong>Day 1</strong> — New Member Orientation (indoor: systems, SOPs)</li>
+      <li><strong>Day 2</strong> — Japanya / Niseko area orientation (local knowledge, community)</li>
+      <li><strong>Days 3–4</strong> — All Member Orientation Trip (on-snow, two days)</li>
+      <li><strong>Day 5</strong> — All Member Admin Training (Stivot, invoicing, calendar)</li>
+    </ul>
+
+    <img class="pdf-img" src="calendar.png" alt="FES members season calendar">
+    <p class="pdf-img-caption">Season calendar — events, workshops, and training throughout the season</p>
+
+    <p style="font-size:0.92rem; color:var(--muted);">You are not required to do consecutive seasons. Many members take time to travel or work elsewhere between winters and return to FES the following season.</p>
+  </section>
+
+  <!-- ──────────────── LIVING IN NISEKO ──────────────── -->
+  <section id="living">
+    <div class="section-label">Life in Niseko</div>
+    <h2>Living in Niseko</h2>
+
+    <p>Niseko is a ski region built around winter tourism. The infrastructure is good for its size, but the area is a collection of small mountain towns — not a city.</p>
+
+    <p><strong>Where FES members live:</strong> FES members are spread across <strong>Kutchan</strong>, <strong>Niseko Town</strong>, and the <strong>Rankoshi/Yunosato area</strong>. The majority of FES staff housing is located in Kutchan. Hirafu is where most guests stay and where the in-season nightlife sits, but very few FES members live there.</p>
+
+    <div class="eval-grid" style="margin-bottom:1.25rem;">
+      <div class="eval-card">
+        <h4>Hirafu — the tourist hub</h4>
+        <ul>
+          <li>Most touristy and lively part of the area during the season</li>
+          <li>Concentrated in Upper and Lower Hirafu area</li>
+          <li>Where most off-mountain social activity happens during peak weeks</li>
+          <li>Common destination for guests; less common as a residence for FES staff</li>
+        </ul>
+      </div>
+      <div class="eval-card">
+        <h4>Kutchan</h4>
+        <ul>
+          <li>Nearest real town — ~15 min by car from Hirafu base</li>
+          <li>Where most FES staff housing is located</li>
+          <li>Three major supermarkets, home centres, hardware stores</li>
+          <li>JR train station: Sapporo (~1.5 hrs), Otaru (~1 hr)</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>Cost of Living</h3>
+    <ul>
+      <li>Hokkaido is generally <strong>more expensive</strong> than the Japanese average for groceries and daily essentials</li>
+      <li>Kutchan's three major supermarkets keep day-to-day living manageable on a normal budget</li>
+      <li>Compared to Canada, the US, New Zealand, or much of Europe, Japan still works out <strong>noticeably cheaper</strong> across food, transport, and entertainment</li>
+      <li>Hirafu restaurant and bar pricing during peak season is an exception — built around international tourism</li>
+      <li>FES members get discounts at <strong>Pow Bar</strong> (organic café) and <strong>Pyram</strong> (organic food shop)</li>
+      <li>If you try to cook and shop as you might at home, costs can run noticeably higher. Eating and living the way most Japanese people do — local supermarkets, seasonal produce, simple home cooking — keeps daily costs low and is genuinely worth exploring. Japan is widely associated with one of the world's longest-lived, healthiest populations, and the everyday food culture that underpins that is affordable, accessible, and often better than what you'd find at home.</li>
+    </ul>
+
+    <h3>Community &amp; Environment</h3>
+    <ul>
+      <li>The international instructor community in Niseko is <strong>small and tight-knit</strong> across schools — you will encounter the same people throughout the season</li>
+      <li>Japanese language classes: Smile language school operates locally; FES can organise in-season workshops as part of the training calendar</li>
+      <li>Niseko receives some of the world's highest annual snowfall — accumulations are measured in metres across the season</li>
+      <li>Heavy snowfall periods bring low visibility days that affect both bookings and daily movement</li>
+      <li>Cold temperatures December through February; March begins to moderate</li>
+    </ul>
+  </section>
+
+  <!-- ──────────────── ACCOMMODATION ──────────────── -->
+  <section id="accommodation">
+    <div class="section-label">Living</div>
+    <h2>Accommodation</h2>
+
+    <p>For first-season Junior Members new to Niseko, FES will in most cases help source accommodation. The more seasons a member has spent in the area, the more we expect them to manage this independently — they'll have built their own networks and familiarity with the local rental market. Support reduces over time.</p>
+
+    <p><strong>Typical setup:</strong> Shared house, 3–4 people, 3 bedrooms, shared kitchen and bathroom.</p>
+
+    <h3>Approximate Costs</h3>
+    <table>
+      <thead><tr><th>Item</th><th>Cost</th></tr></thead>
+      <tbody>
+        <tr><td>Rent (per room, shared)</td><td>approx. ¥100,000/month</td></tr>
+        <tr><td>Utilities</td><td>approx. ¥20,000–30,000/month</td></tr>
+        <tr><td>Snow clearing</td><td>approx. ¥200,000 total for the season, split across all residents</td></tr>
+      </tbody>
+    </table>
+
+    <div class="card" style="border-left:4px solid var(--gold); background:#fdf9ef;">
+      <strong>Accommodation decision deadline: August.</strong><br>
+      Please confirm your situation with us by then so we can plan appropriately.
+    </div>
+
+    <h3>Housing Support</h3>
+    <p>If you source your own accommodation independently, FES subsidises <strong>1/3 of your monthly rent, up to ¥20,000/month</strong>. This applies to independently arranged accommodation only, not FES-sourced housing.</p>
+
+    <h3>Couples</h3>
+    <p>If your partner also works for FES, you share a room in staff housing. If your partner does not work for FES, FES members get priority for staff housing. Niseko can be difficult to navigate without a car — no driver's licence is a practical challenge, particularly outside central Hirafu.</p>
+
+    <img class="pdf-img" src="housing.png" alt="Housing and Vehicle support for Junior Members">
+    <p class="pdf-img-caption">Housing &amp; Vehicle support for Junior Members</p>
+  </section>
+
+  <!-- ──────────────── VEHICLE ──────────────── -->
+  <section id="vehicle">
+    <div class="section-label">Transport</div>
+    <h2>Vehicle</h2>
+
+    <p>Junior Members have access to FES vehicles throughout the season.</p>
+
+    <table>
+      <thead><tr><th>Use type</th><th>Cost</th></tr></thead>
+      <tbody>
+        <tr><td>Work days</td><td>¥3,500/day — <a href="https://www.notion.so/Vehicle-Cost-Explained-2c596ca7e57580d68641c408f3d34f04" target="_blank" style="color:var(--navy)">see how this is calculated</a></td></tr>
+        <tr><td>Private use within Niseko Area</td><td>No charge</td></tr>
+        <tr><td>Private use outside Niseko Area</td><td>Approval required — no charge</td></tr>
+        <tr><td>Fuel</td><td>Always paid by the member</td></tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:0.92rem; color:var(--muted);">For Junior Members with 3+ seasons at FES: FES contributes 1/3 of the base vehicle purchase price, up to <strong>¥250,000</strong> toward your own vehicle.</p>
+  </section>
+
+  <!-- ──────────────── INSURANCE ──────────────── -->
+  <section id="insurance">
+    <div class="section-label">Protection</div>
+    <h2>Insurance</h2>
+
+    <table>
+      <thead><tr><th>Coverage</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Third-party liability</td><td class="covered">✓ Covered by FES</td></tr>
+        <tr><td>Guest injury</td><td class="covered">✓ Covered by FES</td></tr>
+        <tr><td>Your personal injury treatment</td><td class="covered">✓ ~90% covered by FES insurance</td></tr>
+        <tr><td>Freelance worker's compensation</td><td class="optional">Optional — ~¥3,000/month; FES covers half if you choose to enrol</td></tr>
+        <tr><td>Vehicle (work-related)</td><td class="covered">✓ Covered by FES</td></tr>
+        <tr><td>Japanese national health insurance</td><td class="covered">✓ Mandatory for all residents — you pay 30% of medical costs; FES private insurance covers most of that 30% (effective out-of-pocket typically under 10%)</td></tr>
+        <tr><td>Mountain rescue</td><td class="covered">✓ Covered — unless the activity involves proper mountaineering equipment (crampons, ice axes)</td></tr>
+        <tr><td>Compensation for lost work days (injury/illness)</td><td class="own">✗ Not covered — your own risk</td></tr>
+        <tr><td>Travel insurance (personal items, flights, etc.)</td><td class="own">✗ Your responsibility — strongly recommended</td></tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:0.92rem; color:var(--muted);">You are not required to purchase your own third-party liability or guest injury insurance. The FES policy covers this. Travel insurance for personal belongings and contingencies is your own responsibility.</p>
+  </section>
+
+  <!-- ──────────────── VISA ──────────────── -->
+  <section id="visa">
+    <div class="section-label">Work Status</div>
+    <h2>Visa &amp; Work Status</h2>
+
+    <p>You work under an <strong>outsourcing (independent contractor) contract</strong> — not as an employee. You process your own taxes in Japan.</p>
+
+    <table>
+      <thead><tr><th>Situation</th><th>Path</th></tr></thead>
+      <tbody>
+        <tr><td>Working Holiday Visa eligible</td><td>Straightforward — most common route for new members</td></tr>
+        <tr><td>Resident in Japan</td><td>No visa action needed</td></tr>
+        <tr><td>Not WHV eligible — qualifying professional background</td><td>FES can sponsor a ski instructor visa or skilled labour visa — see attached document</td></tr>
+      </tbody>
+    </table>
+
+    <div class="card" style="border-left:4px solid #e74c3c; background:#fff8f8;">
+      <strong>Driver's licence — required.</strong><br>
+      You must hold a valid international driving permit recognised in Japan. Japan is a signatory to the <strong>Geneva Convention on Road Traffic (1949)</strong>, not the Vienna Convention (1968). An international permit issued under the Geneva Convention is valid in Japan — a Vienna Convention permit is not. Check which convention your home country uses before assuming your permit is accepted.
+    </div>
+
+    <p style="margin-top:1rem;">Visa document deadline: <strong>15 July</strong> — send all required documents to Yuka by this date if you need visa sponsorship. The qualifying categories and documentary requirements are detailed in the <a href="visa-requirements.pdf" target="_blank" style="color:var(--navy); font-weight:600;">attached visa requirements document ↗</a>.</p>
+
+    <p style="font-size:0.92rem; color:var(--muted);">FES has an internal HR function (Yuka) that supports members with visa applications. You are not navigating this alone.</p>
+
+    <h3>Tax</h3>
+    <p style="font-size:0.92rem;">Because you are an independent contractor, the Japanese tax rules that apply to you are different from those for employees. Withholding rates are set by Japanese tax law. Snowsports instructors fall under the <strong>Sport Instructor</strong> category in the Japanese withholding tax framework, and FES withholds tax from each monthly invoice at the rate set by that framework.</p>
+
+    <table>
+      <thead><tr><th>Status</th><th>Per-invoice income</th><th>Withholding rate</th><th>Refundable via tax return?</th></tr></thead>
+      <tbody>
+        <tr><td>Japan tax resident</td><td>Up to ¥1,000,000</td><td>10.21%</td><td>Yes — file the following year</td></tr>
+        <tr><td>Japan tax resident</td><td>¥1,000,000 or above</td><td>20.42%</td><td>Yes — file the following year</td></tr>
+        <tr><td>Non-tax resident</td><td>Any amount</td><td>20.42% (flat)</td><td>No — final, not refundable</td></tr>
+      </tbody>
+    </table>
+
+    <p style="font-size:0.88rem; color:var(--muted);">Even on a working visa, you can be considered a <strong>tax resident</strong> of Japan if you can demonstrate that Japan is your living base. The final determination sits with the Japanese tax office. For tax residents, the amount refunded depends on your overall income and deductions. We strongly recommend researching this before the season begins — the difference between resident and non-resident treatment can be significant over the course of a season.</p>
+  </section>
+
+  <!-- ──────────────── SUPPORT PROGRAMME ──────────────── -->
+  <section id="support">
+    <div class="section-label">Benefits</div>
+    <h2>Support Programme</h2>
+
+    <p>FES invests in members who invest in themselves. All support requires a form submission and FES approval. Support amounts increase with loyalty (see Loyalty Programme below).</p>
+
+    <h3>Well-Being</h3>
+    <p style="font-size:0.92rem; color:var(--muted);">We take mental health as seriously as physical health.</p>
+
+    <img class="pdf-img" src="wellbeing.png" alt="FES Well-being support programme">
+    <p class="pdf-img-caption">FES Well-being programme</p>
+
+    <ul>
+      <li><strong>Personal injury insurance</strong> — covered by FES</li>
+      <li><strong>Professional counselling</strong> — FES covers 1 hour per month</li>
+      <li><strong>Sports massage</strong> — subsidised by FES at ¥2,000/30min, up to 4 × 30min per month (book in advance)</li>
+      <li><strong>Local organic café (Pow Bar)</strong> — 30% off energy bars, 10% off eatery (present FES business card)</li>
+      <li><strong>Local organic shop (Pyram)</strong> — 10% off package-free food (personal purchases only)</li>
+    </ul>
+
+    <h3>Career &amp; Skills Development</h3>
+
+    <img class="pdf-img" src="career.png" alt="FES Career and People Development programme">
+    <p class="pdf-img-caption">FES Career &amp; People Development programme</p>
+
+    <ul>
+      <li><strong>On-snow training</strong> — free</li>
+      <li><strong>Career counselling</strong> — free</li>
+      <li><strong>Business lectures</strong> — free (accountant, solicitor, labour consultant — external specialists)</li>
+      <li><strong>Up-skill financial support</strong> — FES reimburses 50% of exam costs, up to ¥50,000/year (1 exam/year, must pass, must return to FES the following season, travel costs included if out of area)</li>
+      <li><strong>Fitness gym reimbursement</strong> — up to ¥5,000/month (season-long membership, minimum 5 uses/month)</li>
+      <li><strong>Snow trip support</strong> — up to 50% of trip cost, up to ¥25,000/season (pre &amp; post trip reports required)</li>
+      <li><strong>Equipment support</strong> — up to ¥10,000/season, 1 item (Jr Members: 50 full days required; must return to FES the following season)</li>
+    </ul>
+
+    <h3>Pro-Deals</h3>
+
+    <img class="pdf-img" src="proDeals.png" alt="FES Pro-deals brand partners">
+    <p class="pdf-img-caption">FES Pro-deals — brand partner discounts available to all members</p>
+
+    <ul style="font-size:0.92rem;">
+      <li><strong>Boot</strong> (custom fitting) — details in Slack #pro-deals after joining</li>
+      <li><strong>Boom Sports</strong> — 20% off retail (present coupon + FES business card)</li>
+      <li><strong>Rhythm Japan</strong> — details in Slack #pro-deals</li>
+      <li><strong>Fullmarks</strong> (POC, Houdini, Hestra, Norrøna) — up to 40% off (Sapporo store)</li>
+      <li><strong>Patagonia</strong> — details in Slack #pro-deals</li>
+      <li><strong>Carv</strong> (ski performance sensor) — details in Slack #pro-deals</li>
+      <li><strong>Zipfit</strong> (custom liners) — details in Slack #pro-deals</li>
+      <li><strong>MountainFLOW eco-wax</strong> — details in Slack #pro-deals</li>
+      <li><strong>Tecnica / Blizzard</strong> (POC: Yusuke) — order must be placed the season prior</li>
+    </ul>
+
+    <h3>Loyalty Programme</h3>
+    <p>The longer you stay, the more the support amounts grow.</p>
+
+    <img class="pdf-img loyalty-img" src="loyalty.png" alt="FES Loyalty Programme progressive rate table">
+    <p class="pdf-img-caption">Loyalty programme — support caps increase with each season tier</p>
+
+    <h3>Rewards Programme</h3>
+    <p>Participating in FES events, workshops, and training earns points, which convert to a bonus rate on your earnings at end of season.</p>
+
+    <img class="pdf-img" src="rewards.png" alt="FES Rewards Programme points and rates">
+    <p class="pdf-img-caption">Rewards programme — points from events and workshops convert to a season-end bonus rate</p>
+
+    <div class="rewards-grid">
+      <div class="rewards-col">
+        <h4>Events</h4>
+        <ul>
+          <li>Tanya Tuesday</li>
+          <li>Team Night Ride</li>
+          <li>Team Photo Shoot</li>
+          <li>Meet the Team / Met the Team</li>
+          <li>Team Trip (day)</li>
+          <li>Team Trip (overnight)</li>
+        </ul>
+      </div>
+      <div class="rewards-col">
+        <h4>Workshops</h4>
+        <ul>
+          <li>Accounting Workshop</li>
+          <li>Mental Health Care Therapy</li>
+          <li>Elevated Service Workshop</li>
+          <li>Intro to Guiding Workshop</li>
+          <li>Avalanche Workshop</li>
+          <li>Strategy Workshop</li>
+          <li>Stoke Sessions</li>
+        </ul>
+      </div>
+      <div class="rewards-col">
+        <h4>Training &amp; Leadership</h4>
+        <ul>
+          <li>Staff Training Delivery</li>
+          <li>Workshop Leader</li>
+          <li>Day Trip Leader</li>
+          <li>Overnight Trip Leader</li>
+        </ul>
+      </div>
+      <div class="rewards-col">
+        <h4>Awards &amp; Feedback</h4>
+        <ul>
+          <li>Guest Feedback scores</li>
+          <li>Team Awards</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ──────────────── YOUR INTERVIEW ──────────────── -->
+  <section id="interview">
+    <div class="section-label">Interview Prep</div>
+    <h2>Your Interview</h2>
+
+    <div class="card" style="border-left:4px solid var(--gold); background:#fdf9ef; margin-bottom:1.5rem;">
+      <p style="margin:0;">Our goal in this interview is not simply to assess whether you're the right fit for FES — it's equally to help you assess whether FES is the right fit for you. We believe long-term careers only take root when a school and an instructor are genuinely aligned from both sides. For that reason, we ask as much as we share. Even if it turns out that FES and you aren't the best match for one another, we want to help you find the right place — we've spent years building relationships and knowledge across the snowsports industry, and we'd rather point you in the right direction than place you somewhere that doesn't serve your career.</p>
+    </div>
+    <p>The interview is a conversation, not a checklist. We explore four areas with every candidate — not to find someone who scores perfectly across all of them, but to understand how you think, how you operate, and where you want to go. Technical skiing or riding ability matters, but it is not the primary focus.</p>
+
+    <div class="eval-grid">
+      <div class="eval-card">
+        <h4>Self Investment</h4>
+        <ul>
+          <li>Openness to learning — not how many days you can work, but whether you actively seek feedback and growth</li>
+          <li>Marketing &amp; networking</li>
+          <li>Product development</li>
+          <li>Guest retention</li>
+          <li>Treating every guest, teammate, and workshop as a genuine learning opportunity</li>
+        </ul>
+      </div>
+      <div class="eval-card">
+        <h4>Entrepreneurship</h4>
+        <ul>
+          <li>Goal setting</li>
+          <li>Initiative</li>
+          <li>Resilience &amp; tenacity</li>
+          <li>Problem solving</li>
+          <li>Business-owner mindset — thinking critically and taking ownership of your own career trajectory</li>
+        </ul>
+      </div>
+      <div class="eval-card">
+        <h4>Far East Mindset</h4>
+        <ul>
+          <li>Alignment with <a href="https://fareastsnowsports.com/en/philosophy/" target="_blank" style="color:var(--navy);">our missions</a></li>
+          <li>Accurate self-analysis</li>
+          <li>Active listening</li>
+          <li>Continuous development</li>
+          <li>Collaborative approach</li>
+        </ul>
+      </div>
+      <div class="eval-card">
+        <h4>Operational Skills</h4>
+        <ul>
+          <li>SOP proficiency</li>
+          <li>Avoid assumptions</li>
+          <li>Prompt communication</li>
+          <li>Thorough reporting</li>
+          <li>Time &amp; expectation management</li>
+        </ul>
+      </div>
+    </div>
+
+    <p style="color:var(--muted); font-size:0.92rem; margin-top:0.75rem;">Come prepared to talk honestly about your experience, your goals, and how you'd approach the less glamorous sides of the role — admin, communication, guest management. That's where the conversation usually gets most useful for both sides.</p>
+  </section>
+
+  <!-- ──────────────── FAQ ──────────────── -->
+  <section id="faq">
+    <div class="section-label">Questions</div>
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>Pay</h3>
+
+    <div class="faq-item">
+      <details>
+        <summary>How does the 35% / 55% work exactly?</summary>
+        <div class="faq-answer">35% is what you receive when FES assigns you a client — they book through us, we allocate you the lesson. 55% is what you receive when you process your own booking end-to-end: you communicate with the client, create the invoice in our system, collect payment, and deliver the lesson. Both rates are approximate — actual figures vary within ±5% depending on credit card fees and agent commissions.</div>
+      </details>
+    </div>
+    <div class="faq-item">
+      <details>
+        <summary>Can I increase my rate during the season?</summary>
+        <div class="faq-answer">Your blended rate increases as the proportion of OBP work rises. If half your days are assigned and half are OBP, your effective average is around 45%. The more clients you generate yourself, the higher your season-average rate.</div>
+      </details>
+    </div>
+    <div class="faq-item">
+      <details>
+        <summary>Do I need to do consecutive seasons?</summary>
+        <div class="faq-answer">No. There is no back-to-back requirement. You can take a season off and return to FES. Your loyalty tier is based on total seasons with FES, not consecutive ones.</div>
+      </details>
+    </div>
+
+    <h3>Accommodation</h3>
+
+    <div class="faq-item">
+      <details>
+        <summary>What does accommodation actually cost per month?</summary>
+        <div class="faq-answer">Roughly ¥85,000/month per room in a shared house (typically 3–4 people), plus utilities (~¥20,000–30,000/month) and a share of snow clearing costs (~¥200,000 split across the season). If you source your own accommodation, FES subsidises 1/3 of your rent up to ¥20,000/month.</div>
+      </details>
+    </div>
+    <div class="faq-item">
+      <details>
+        <summary>When do I need to confirm my accommodation situation?</summary>
+        <div class="faq-answer">By August. This allows FES to plan housing allocation for the season.</div>
+      </details>
+    </div>
+    <div class="faq-item">
+      <details>
+        <summary>What if my partner is coming but not working for FES?</summary>
+        <div class="faq-answer">FES members get priority for staff housing. If your partner is not working for FES, they are lower priority for a staff housing spot. This needs to be discussed individually.</div>
+      </details>
+    </div>
+
+    <h3>Insurance</h3>
+
+    <div class="faq-item">
+      <details>
+        <summary>As an independent contractor, do I need my own insurance?</summary>
+        <div class="faq-answer">For the core risks — third-party liability, guest injury, and your personal injury treatment — no. FES covers all of these. You will end up paying less than 10% of any medical bills once Japanese health insurance and the FES private insurance layer are both applied. Freelance worker's compensation is optional at ~¥3,000/month, with FES covering half. What you do need your own cover for: lost income if you can't work, and travel insurance for personal belongings and flights. We strongly recommend travel insurance.</div>
+      </details>
+    </div>
+
+    <h3>Visa</h3>
+
+    <div class="faq-item">
+      <details>
+        <summary>What types of visa do members come on?</summary>
+        <div class="faq-answer">Roughly half of our team are Japan residents. Of the other half, most are on a ski instructor visa sponsored by FES. Some are on a skilled labour visa, which requires 36+ months of documented, provable professional experience in the field.</div>
+      </details>
+    </div>
+    <div class="faq-item">
+      <details>
+        <summary>Can FES sponsor my visa?</summary>
+        <div class="faq-answer">Yes, for eligible candidates. See the <a href="visa-requirements.pdf" target="_blank" style="color:var(--navy); font-weight:600;">visa requirements document ↗</a> for qualifying categories and requirements. Send all documents to Yuka by 15 July.</div>
+      </details>
+    </div>
+    <div class="faq-item">
+      <details>
+        <summary>Do I need a driver's licence?</summary>
+        <div class="faq-answer">Yes. You must hold a valid international driving permit recognised in Japan. Japan follows the Geneva Convention (1949) — not the Vienna Convention (1968). Make sure your permit is issued under the Geneva Convention before assuming it is valid here.</div>
+      </details>
+    </div>
+
+    <h3>Japanese Language</h3>
+
+    <div class="faq-item">
+      <details>
+        <summary>Are there Japanese language classes in Niseko?</summary>
+        <div class="faq-answer">Yes. There is a language school called Smile in the area with qualified teachers. FES can also provide a Japanese language workshop upon request — speak to Yuka or raise it at your interview.</div>
+      </details>
+    </div>
+
+    <h3>General</h3>
+
+    <div class="faq-item">
+      <details>
+        <summary>What's the difference between FES and a conventional ski school?</summary>
+        <div class="faq-answer">Conventional ski schools serve an essential role in the industry and we have real respect for what they've built. FES approaches things differently — instructors here operate as independent professionals within a shared platform, with genuine ownership over their client relationships, invoicing, and career development. The tradeoff is more responsibility. The return is better rates, real support, and a team that takes the profession seriously.</div>
+      </details>
+    </div>
+    <div class="faq-item">
+      <details>
+        <summary>What does a typical season look like beyond teaching?</summary>
+        <div class="faq-answer">Beyond lessons, you're encouraged to participate in team training, workshops, and events. These aren't obligations — they earn points in the Rewards Programme and are how the team grows collectively. Workshops cover accounting, service, guiding, and mental health. Team events include overnight trips, night riding, and the annual photo shoot.</div>
+      </details>
+    </div>
+    <div class="faq-item">
+      <details>
+        <summary>What does FES expect from me operationally?</summary>
+        <div class="faq-answer">Prompt communication (same day, every time), accurate reporting, calendar discipline, no assumptions, and guest-first thinking in every interaction. The operational standard is high — this is what we evaluate, and it's also what separates good instructors from great ones.</div>
+      </details>
+    </div>
+
+  </section>
+
+</div><!-- /container -->
+
+<div style="background:#fffbea; border-top:2px solid #e8d87a; padding:1rem 1.5rem; text-align:center;">
+  <p style="font-size:0.78rem; color:#7a6a20; line-height:1.6; max-width:640px; margin:0 auto;">
+    <strong style="letter-spacing:0.06em;">BETA</strong> &nbsp;·&nbsp; This page is a work in progress. Some figures, policies, or details may not yet be fully accurate. Please treat it as a starting point — anything that matters to you can be clarified at your interview.
+  </p>
+</div>
+
+<div class="footer">
+  <img src="fes-logo.png" alt="Far East Snowsports" style="height:28px; filter:brightness(0) invert(1); opacity:0.7; display:block; margin:0 auto 0.9rem;">
+  <p><strong>Far East Snowsports</strong> &nbsp;·&nbsp; Niseko, Hokkaido, Japan</p>
+  <p style="margin-top:0.5rem;">This document reflects the 25/26 season structure. 26/27 figures will be confirmed before contracts are issued.</p>
+</div>
+
+<script>
+// ── Scroll-reveal observer ──
+(function() {
+  const revealEls = document.querySelectorAll(
+    '.section, .card, .rate-card, .pillar, .pdf-img, table, h2, h3, .section-label'
+  );
+  revealEls.forEach((el, i) => {
+    el.classList.add('reveal');
+    // Stagger siblings within the same parent
+    const siblings = Array.from(el.parentElement.children).filter(c => c.classList.contains('reveal'));
+    const idx = siblings.indexOf(el);
+    if (idx === 1) el.classList.add('reveal-delay-1');
+    else if (idx === 2) el.classList.add('reveal-delay-2');
+    else if (idx === 3) el.classList.add('reveal-delay-3');
+    else if (idx >= 4) el.classList.add('reveal-delay-4');
+  });
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  revealEls.forEach(el => observer.observe(el));
+})();
+
+// ── Number counter for rate % figures ──
+(function() {
+  const ratePcts = document.querySelectorAll('.rate-pct');
+  ratePcts.forEach(el => {
+    const numNode = Array.from(el.childNodes).find(n => n.nodeType === 3 && n.textContent.trim().match(/^\d+$/));
+    if (!numNode) return;
+    const target = parseInt(numNode.textContent.trim(), 10);
+    const span = document.createElement('span');
+    span.className = 'count-num';
+    span.textContent = '0';
+    numNode.replaceWith(span);
+
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        obs.unobserve(entry.target);
+        let start = 0;
+        const duration = 800;
+        const step = (timestamp) => {
+          if (!start) start = timestamp;
+          const progress = Math.min((timestamp - start) / duration, 1);
+          const eased = 1 - Math.pow(1 - progress, 3);
+          span.textContent = Math.round(eased * target);
+          if (progress < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
+      });
+    }, { threshold: 0.5 });
+    obs.observe(el);
+  });
+})();
+</script>
+
+</body>
+</html>
